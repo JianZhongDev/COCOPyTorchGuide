@@ -118,7 +118,7 @@ class COCOSegDataset(Dataset):
         if self.data_transform is not None:
             cur_data = self.data_transform(cur_data)
         if self.target_transform is not None:
-            cur_target = self.target_transform
+            cur_target = self.target_transform(cur_target)
         if self.common_transform is not None:
             cur_data_pkg = [cur_data, cur_target]
             cur_data_pkg = self.common_transform(cur_data_pkg)
