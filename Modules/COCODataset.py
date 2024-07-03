@@ -81,7 +81,7 @@ class COCOSegDataset(Dataset):
 
 
     def __len__(self):
-        if self.split_segmentation:
+        if self.split_segmentations:
             return len(self.ann_ids)
         else:
             return len(self.img_ids)
